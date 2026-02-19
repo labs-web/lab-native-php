@@ -4,7 +4,7 @@ Ce Lab est dédié à l'apprentissage de **NativePHP**, un framework qui permet 
 
 ## 🎯 Objectifs Pédagogiques
 - Comprendre le fonctionnement de NativePHP sur **Windows**.
-- Explorer le déploiement sur **Mobile** (iOS/Android).
+- Explorer le déploiement sur **Mobile** (Android).
 - Maîtriser le bridge entre PHP et les fonctionnalités natives du système.
 - Gérer la persistance de données avec SQLite en environnement local.
 
@@ -45,7 +45,7 @@ Ce Lab est dédié à l'apprentissage de **NativePHP**, un framework qui permet 
 - Node.js & NPM
 - Docker (optionnel pour certains builds)
 - Pour Windows : Accès admin pour l'installation des dépendances.
-- Pour Mobile : Xcode (Mac) ou Android Studio / SDK.
+- Pour Mobile : Android Studio / SDK.
 
 ---
 *Projet pédagogique - [Solicode]*
