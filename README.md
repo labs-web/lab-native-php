@@ -9,7 +9,7 @@ Ce Lab est dédié à l'apprentissage de **NativePHP**, un framework qui permet 
 - Gérer la persistance de données avec SQLite en environnement local.
 
 ## 🗺️ Localisation Curriculaire
-- **Compétence** : M108 (Développer une application desktop) + M107 (Développer une application mobile)
+- **Compétence** :
 - **Niveau** : N1 (Débutant) à MVP (Produit Minimal Viable)
 - **Stack** : PHP, Laravel, NativePHP, SQLite, TailwindCSS.
 
@@ -23,7 +23,7 @@ Ce Lab est dédié à l'apprentissage de **NativePHP**, un framework qui permet 
 
 ### 2. [Atelier : Calculatrice (Somme)](./atelier/02-calculatrice/)
 - Gestion des interactions utilisateur (Forms).
-- Logique métier en PHP réactif (Livewire ou contrôleurs).
+- Logique métier en PHP réactif (contrôleurs).
 - Cible : Windows & Mobile.
 
 ### 3. [Mini-Projet : TODO Liste](./mini-projet/03-todo-list/)
@@ -40,10 +40,9 @@ Ce Lab est dédié à l'apprentissage de **NativePHP**, un framework qui permet 
 - `mini-projet/` : Rendu final du Lab.
 
 ## 📥 Prérequis
-- PHP 8.2+
+- PHP 8.2+ / Laravel
 - Composer
 - Node.js & NPM
-- Docker (optionnel pour certains builds)
 - Pour Windows : Accès admin pour l'installation des dépendances.
 - Pour Mobile : Android Studio / SDK.
 
