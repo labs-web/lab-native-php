@@ -17,32 +17,56 @@ description: Expert de l'initialisation et de la structuration pédagogique de p
 
 ## ⚡ Actions (Orchestration)
 
-### Action A : Gérer l'Initialisation et la Structuration Pédagogique (Le Lab)
-> **Description** : Scaffolder la structure globale et planifier les étapes (Fondations, Opérations, Scénario).
+### Action A : Initialisation de Lab
+> **Description** : Créer seulement la structure de fichiers et dossiers du Lab sans les contenus.
 - **Capacités Utilisées** :
-  - `capacités/capacité-ingenierie-pedagogique.md`
-  - `capacités/capacité-creation-presentations-marp.md`
+  - `capacités/capacité-initialisation-lab.md`
 - **Entrées** : `Sujet`, `Contexte`
-- **Sorties** : Arborescence de dossiers (`docs/`, `atelier/`, `app/`), Présentations Marp (.md), et Tutoriels d'atelier.
-- **❌ Interdictions Spécifiques** :
-  - Le rendu complet de l'étape 3 doit impérativement se situer dans le dossier nommé `app` (interdiction de le mettre ailleurs).
-- **✅ Points de Contrôle** :
-  - La progression respecte strictement les 3 étapes pédagogiques.
+- **Sorties** : Arborescence de dossiers (`docs/`, `atelier/`, `app/`)
+- **❌ Interdictions Spécifiques** : Ne générer aucun contenu pédagogique lors de cette phase.
 - **📝 Instructions d'Orchestration** :
-  1. **[Étape 1] Initialiser** les répertoires standards (`docs/`, `atelier/`).
-  2. **[Étape 2] Définir** les objectifs de passage de l'Étape 1 à l'Étape 3 via `capacité-ingenierie-pedagogique.md`.
-  3. **[Étape 3] Produire** les Présentations 1 et 2 avec `capacité-creation-presentations-marp.md`, et leurs ateliers associés.
-  4. **[Étape 4] Définir** le cahier des charges de l'Étape 3 (app structuré dans le dossier `/app`).
+  1. Instancier l'arborescence définie selon `capacité-initialisation-lab.md`.
+
+### Action B : Créer un Atelier
+> **Description** : Rédiger un tutoriel d'atelier guidant la pratique de l'apprenant.
+- **Capacités Utilisées** :
+  - `capacités/capacité-creation-atelier.md`
+- **Entrées** : `Objectif technique`, `Sujet`
+- **Sorties** : Fichier markdown de tutoriel dans le dossier `atelier/`
+- **📝 Instructions d'Orchestration** :
+  1. Générer le contenu du tutoriel structuré par étapes via `capacité-creation-atelier.md`.
+
+### Action C : Créer une Présentation
+> **Description** : Générer un diaporama théorique formaté en Markdown avec Marp.
+- **Capacités Utilisées** :
+  - `capacités/capacité-creation-presentations-marp.md`
+- **Entrées** : `Concepts théoriques`
+- **Sorties** : Fichier markdown Marp dans le dossier `docs/`
+- **📝 Instructions d'Orchestration** :
+  1. Utiliser `capacité-creation-presentations-marp.md` pour concevoir les slides.
+
+### Action D : Planifier le Lab
+> **Description** : Structurer le cheminement pédagogique du Lab en 3 étapes.
+- **Capacités Utilisées** :
+  - `capacités/capacité-planification-lab.md`
+- **Entrées** : `Sujet global`
+- **Sorties** : Plan détaillé de l'architecture pédagogique (Fondations, Opérations, Scénario)
+- **📝 Instructions d'Orchestration** :
+  1. Appliquer les 3 étapes de progression selon `capacité-planification-lab.md`.
 
 ---
 
 ## 🛠️ Capacités (Savoir-Faire Technique)
 *Documentation des fichiers situés dans le dossier `capacités/`*
 
-### 1. `capacité-creation-presentations-marp.md`
-- **Rôle** : Conception de diaporamas au format Markdown pour Marp.
-- **Règles Clés** : Frontmatter yaml systématique, 1 idée par slide.
+### 1. `capacité-initialisation-lab.md`
+- **Rôle** : Création de l'ossature de dossiers brute.
 
-### 2. `capacité-ingenierie-pedagogique.md`
+### 2. `capacité-creation-atelier.md`
+- **Rôle** : Conception de tutoriels de pratique structurés.
+
+### 3. `capacité-creation-presentations-marp.md`
+- **Rôle** : Conception de diaporamas au format Markdown pour Marp.
+
+### 4. `capacité-planification-lab.md`
 - **Rôle** : Application de la progression pédagogique en 3 étapes.
-- **Règles Clés** : Progression (Fondations → Opérations Simples → Scénario Complet).

@@ -1,13 +1,15 @@
-# Atelier 1 : Hello World dans mobile (Capacitor)
+# Atelier 1 : Hello World dans mobile (NativePHP v3)
 
 ## Objectif
-Créer et exécuter une application mobile Android native affichant "Hello World" en utilisant NativePHP (Capacitor) sur un environnement Windows.
+Créer et exécuter une application mobile Android native affichant "Hello World" en utilisant NativePHP v3 sur un environnement Windows.
 
 ## Prérequis
 - PHP 8.2+
 - Composer & NPM
-- Android Studio installé (avec SDK Android et Émulateur configurés)
+- Android Studio 2024.2.1 ou plus récent (avec SDK Android API 33+ et Émulateur configurés)
+- 7zip installé (requis sous Windows)
 - Variables d'environnement Windows correctement définies pour Android (JAVA_HOME, ANDROID_HOME).
+- Dossiers exclus de Windows Defender (C:\temp et le dossier du projet) pour accélérer la compilation.
 
 ## Étapes de réalisation
 
@@ -31,19 +33,26 @@ Modifiez le fichier `resources/views/welcome.blade.php` :
 <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="text-center p-8 bg-white shadow-lg rounded-xl">
         <h1 class="text-4xl font-bold text-blue-600 mb-2">Hello World !</h1>
-        <p class="text-gray-600">Application mobile motorisée par NativePHP (Capacitor)</p>
+        <p class="text-gray-600">Application mobile motorisée par NativePHP (v3)</p>
     </div>
 </body>
 </html>
 ```
 
 ### 3. Installation et configuration de NativePHP
-Installez l'implémentation Capacitor de NativePHP :
+Installez le package NativePHP Mobile (v3) :
 ```bash
-composer require nativephp/capacitor
+composer require nativephp/mobile
 ```
 
-Initialisez la configuration (AppServiceProvider, layout natif de base) :
+Avant d'initialiser, ajoutez ces variables à votre fichier `.env` :
+```env
+NATIVEPHP_APP_ID=com.votreentreprise.votreapp
+NATIVEPHP_APP_VERSION="DEBUG"
+NATIVEPHP_APP_VERSION_CODE="1"
+```
+
+Initialisez la configuration (crée le dossier `nativephp` et configure le projet) :
 ```bash
 php artisan native:install
 ```
@@ -57,9 +66,9 @@ npm run build
 
 Lancez le développement mobile :
 ```bash
-php artisan native:dev
+php artisan native:run
 ```
-*(Le processus synchronise les fichiers Laravel via Capacitor et ouvre Android Studio ou lance l'application directement dans l'émulateur).*
+*(Le processus vous guide pour compiler et lancer l'application directement dans l'émulateur ou sur un appareil réel).*
 
 ## Vérification
-L'application doit s'afficher sur l'émulateur Android sans recourir à un navigateur web, respectant les contraintes de l'OS mobile.
+L'application doit s'afficher sur l'émulateur Android, respectant les contraintes de l'OS mobile, et un dossier `nativephp` (à ajouter via un `.gitignore`) aura été généré pour stocker de façon éphémère les fichiers de build du projet.
