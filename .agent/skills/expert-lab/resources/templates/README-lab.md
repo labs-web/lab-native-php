@@ -15,7 +15,7 @@ L'objectif est de [objectif pédagogique précis].
 *   `01-initialization` : Setup et premier exemple.
 *   `02-presentation-complete` : Vue d'ensemble exhaustive.
 
-### Mini-projet
-*   [Description du mini-projet à réaliser].
+### app
+*   [Description du app à réaliser].
 *   Stack : [Technologies utilisées].
 *   Objectif : [Résultat attendu].

@@ -5,52 +5,44 @@ description: Expert de l'initialisation et de la structuration pédagogique de p
 
 # Skill : Expert Lab
 
-## 🎯 Objectif & Périmètre
+## 🎯 Périmètre Global
 **Mission** : Générer une structure de projet standardisée pour les Labs pédagogiques et guider la création du contenu didactique.
 
-### ✅ Actions Autorisées
-- **Scaffolder** la structure globale du projet (`docs/`, `atelier/`, `mini-projet/`).
-- **Créer et formater** des présentations pédagogiques utilisant le format **Marp** (Markdown).
-- **Structurer** le cheminement pédagogique du Lab en étapes progressives.
+### 🚫 Interdictions Globales (Règles d'Or)
+1. **Pédagogie Active** : Ne jamais présenter une théorie sans l'accompagner d'une pratique (Atelier).
+2. **Standardisation Marp** : Toute présentation doit inclure les directives Marp (`marp: true`, `theme`, `paginate: true`).
+3. **Remplacement de l'Expertise** : Ce skill ne remplace pas l'expertise technique métier, il en structure la transmission.
 
-### ❌ Limites (Ce qu'il ne fait PAS)
-- Ne remplace pas l'expertise technique du métier, mais en structure la transmission.
+---
 
-## 🧠 Capacités (Capacities)
+## ⚡ Actions (Orchestration)
 
-### Capacité 1 : Création de Présentations Marp
-L'agent est capable de concevoir des diaporamas au format Markdown pour Marp :
-- Ajout systématique du frontmatter YAML (`marp: true`, `theme`, `paginate: true`).
-- Séparation des diapositives par `---`.
-- Structuration aérée : 1 idée claire par slide.
+### Action A : Gérer l'Initialisation et la Structuration Pédagogique (Le Lab)
+> **Description** : Scaffolder la structure globale et planifier les étapes (Fondations, Opérations, Scénario).
+- **Capacités Utilisées** :
+  - `capacités/capacité-ingenierie-pedagogique.md`
+  - `capacités/capacité-creation-presentations-marp.md`
+- **Entrées** : `Sujet`, `Contexte`
+- **Sorties** : Arborescence de dossiers (`docs/`, `atelier/`, `app/`), Présentations Marp (.md), et Tutoriels d'atelier.
+- **❌ Interdictions Spécifiques** :
+  - Le rendu complet de l'étape 3 doit impérativement se situer dans le dossier nommé `app` (interdiction de le mettre ailleurs).
+- **✅ Points de Contrôle** :
+  - La progression respecte strictement les 3 étapes pédagogiques.
+- **📝 Instructions d'Orchestration** :
+  1. **[Étape 1] Initialiser** les répertoires standards (`docs/`, `atelier/`).
+  2. **[Étape 2] Définir** les objectifs de passage de l'Étape 1 à l'Étape 3 via `capacité-ingenierie-pedagogique.md`.
+  3. **[Étape 3] Produire** les Présentations 1 et 2 avec `capacité-creation-presentations-marp.md`, et leurs ateliers associés.
+  4. **[Étape 4] Définir** le cahier des charges de l'Étape 3 (app structuré dans le dossier `/app`).
 
-### Capacité 2 : Ingénierie Pédagogique du Lab (Les 3 Étapes)
-L'agent applique une progression pédagogique stricte pour chaque Lab :
-- **Étape 1 : Fondations**
-  - **Présentation 1** : Théorie, concepts de base et préparation de l'environnement.
-  - **Atelier 1** : "Hello World" (Validation de l'environnement de travail et stack technique).
-- **Étape 2 : Opérations Simples**
-  - **Présentation 2** : Concepts techniques intermédiaires (ex: Gestion d'état, interactions basiques).
-  - **Atelier 2** : Exercice ciblé sur une opération métier simple (ex: Calculatrice locale).
-- **Étape 3 : Scénario Complet**
-  - **Mini-projet** : Application d'un cas d'usage complet dans le dossier imposé `app` (ex: Todo List avec persistance).
+---
 
-## 📥 Entrées / 📤 Sorties
-| Direction  | Nom         | Description / Format                            |
-| :--------- | :---------- | :---------------------------------------------- |
-| **Entrée** | `Sujet`     | Thème principal du lab (ex: NativePHP mobile)   |
-| **Entrée** | `Contexte`  | Niveau technique visé et prérequis attendus     |
-| **Sortie** | `Structure` | Arborescence de dossiers                        |
-| **Sortie** | `Docs`      | Présentations Marp (.md) et Tutoriels d'atelier |
+## 🛠️ Capacités (Savoir-Faire Technique)
+*Documentation des fichiers situés dans le dossier `capacités/`*
 
-## 🔄 Algorithme d'Exécution
-1. **Initialiser** les répertoires standards (`docs/`, `atelier/`).
-2. **Définir** les objectifs de passage de l'Étape 1 à l'Étape 3.
-3. **Produire** la Présentation 1 (Marp) puis le Tutoriel Atelier 1 (Hello World).
-4. **Produire** la Présentation 2 (Marp) puis le Tutoriel Atelier 2 (Opération simple).
-5. **Définir** le cahier des charges de l'Étape 3 (Mini-projet dans dossier `/app`).
+### 1. `capacité-creation-presentations-marp.md`
+- **Rôle** : Conception de diaporamas au format Markdown pour Marp.
+- **Règles Clés** : Frontmatter yaml systématique, 1 idée par slide.
 
-## ⚠️ Règles d'Or
-1. **Pédagogie Active** : Toujours coupler une théorie (Présentation) avec une pratique immédiate (Atelier).
-2. **Standardisation Marp** : Toute présentation doit inclure les directives Marp.
-3. **Dossier Cible** : Le rendu complet de l'étape 3 doit impérativement se situer dans le dossier nommé `app`.
+### 2. `capacité-ingenierie-pedagogique.md`
+- **Rôle** : Application de la progression pédagogique en 3 étapes.
+- **Règles Clés** : Progression (Fondations → Opérations Simples → Scénario Complet).

@@ -26,7 +26,7 @@ Ce Lab est dédié à l'apprentissage de **NativePHP**, un framework qui permet 
 - Logique métier en PHP réactif (contrôleurs).
 - Cible : Windows & Mobile.
 
-### 3. [Mini-Projet : TODO Liste](./mini-projet/03-todo-list/)
+### 3. [app : TODO Liste](./app/03-todo-list/)
 - Utilisation du Bridge NativePHP.
 - Gestion d'une base de données SQLite embarquée.
 - Notifications système.
@@ -37,7 +37,7 @@ Ce Lab est dédié à l'apprentissage de **NativePHP**, un framework qui permet 
 ## 🛠️ Structure du Repo
 - `docs/` : Ressources et tutoriels théoriques.
 - `atelier/` : Exercices pratiques progressifs.
-- `mini-projet/` : Rendu final du Lab.
+- `app/` : Rendu final du Lab.
 
 ## 📥 Prérequis
 - PHP 8.2+ / Laravel
